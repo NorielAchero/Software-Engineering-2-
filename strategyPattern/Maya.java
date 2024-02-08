@@ -1,3 +1,4 @@
+package strategyPattern;
 public class Maya implements PaymentType {
     
     public String calculatePayment(){
