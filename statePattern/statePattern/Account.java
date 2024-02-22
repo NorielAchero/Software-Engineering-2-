@@ -43,7 +43,6 @@ public class Account{
         return "";
     }
 
-
     public void setAccountNumber(String accountNumber){
         this.accountNumber = accountNumber;
     }
