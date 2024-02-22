@@ -22,21 +22,21 @@ public class Account{
     }
 
     public void deposit(Double depositAmount){
-        accountState.deposit(depositAmount);
+        accountState.deposit(depositAmount, this);
     }
     public void withdraw(Double withdrawAmount){
-        accountState.withdraw(withdrawAmount);
+        accountState.withdraw(withdrawAmount, this);
     }
     public void suspend(){
-        accountState.suspend();
+        accountState.suspend(this);
    
     }
     public void activate(){
-        accountState.activate();
+        accountState.activate(this);
 
     }
     public void close(){
-        accountState.close();
+        accountState.close(this);
     }
     public String toString(){
         System.out.println("Account Number: " + accountNumber + " \nBalance: " + balance);
@@ -51,7 +51,7 @@ public class Account{
         return accountNumber;
     }
 
-    public void setBalance(double balance){
+    public void setBalance(Double balance){
         this.balance  = balance;
     }
 
